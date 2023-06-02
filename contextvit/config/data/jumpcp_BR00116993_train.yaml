@@ -1,0 +1,18 @@
+jumpcp_BR00116993_train:
+  name: JUMPCP
+  args:
+    cyto_mask_path_list:
+      - "s3://insitro-research-2023-context-vit/jumpcp/BR00116993.pq"
+
+    split: train
+    perturbation_type: compound
+
+  loader:
+    num_workers: 32
+    batch_size: 32
+    pin_memory: True
+    drop_last: True
+    shuffle: True
+
+  output_dir: null
+

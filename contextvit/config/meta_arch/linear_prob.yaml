@@ -1,0 +1,21 @@
+# Checkpoint to the pre-trained DINO
+checkpoint: null  # checkpoint to the pre-trained DINO
+
+# linear evaluator
+num_classes: 2
+target: tumor
+label_smoothing: 0.1
+use_mlp: False
+
+optimizer:
+  name: SGD
+  args:
+    lr: 0.0005 # 128 batch size
+    weight_decay: 0
+    momentum: 0.9
+
+scheduler:
+  name: CosineAnnealingLR
+  args:
+    T_max: null
+    eta_min: 0

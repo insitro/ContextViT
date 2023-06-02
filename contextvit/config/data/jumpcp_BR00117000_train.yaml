@@ -1,0 +1,19 @@
+jumpcp_BR00117000_train:
+  name: JUMPCP
+  args:
+    cyto_mask_path_list:
+      - "s3://insitro-research-2023-context-vit/jumpcp/BR00117000.pq"
+
+    split: train
+    perturbation_type: crispr
+
+  # training data loader configuration
+  loader:
+    num_workers: 32
+    batch_size: 32
+    pin_memory: True
+    drop_last: True
+    shuffle: True
+
+  output_dir: null
+
